@@ -12,9 +12,7 @@ const projectSchema=mongoose.Schema({
     end_date:{type:String,required:true},
     location:{type:String,required:true},
     status:{type:String,required:true}
-},{
-    versionKey: false,
-  })
+})
 
 const Project=mongoose.model("project",projectSchema)
 module.exports={Project};
