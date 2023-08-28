@@ -4,11 +4,11 @@ require('dotenv').config();
 const { AuthRoute } = require("./routes/AuthRoute");
 const { connection } = require("./Config/db");
 const { ProjectRoute } = require("./routes/ProjectRoute");
-let port = process.env.PORT; // Use uppercase for 'PORT'
+let port = process.env.PORT;
 const app = express();
 
 app.use(express.json());
-app.use(cors({ origin: "*" }));
+app.use(cors({ origin: "http://localhost:3000" }));
 
 app.use("/", AuthRoute);
 app.use("/", ProjectRoute);
